@@ -30,12 +30,34 @@ public class UserTests {
     public void testPostUser(){
         Response response = UserEndPoints.createUser(userPayload);
         response.then().log().all();
-        Assert.assertEquals(response.getStatusCode(), 200);
+        Assert.assertEquals(response.getStatusCode(), 200);//TestNG assertions
     }
 
     @Test(priority = 2)
     public void testGetUserByName(){
         Response response = UserEndPoints.readUser(this.userPayload.getUsername());
+        response.then().log().all();
+        Assert.assertEquals(response.getStatusCode(), 200);
+    }
+
+    @Test(priority = 3)
+    public void testUpdateUserByName(){
+
+        userPayload.setFirstName(faker.name().firstName());
+        userPayload.setLastName(faker.name().lastName());
+        userPayload.setEmail(faker.internet().emailAddress());
+
+        Response response = UserEndPoints.updateUser(this.userPayload.getUsername(),userPayload);
+        response.then().log().body().statusCode(200);//rest Assured assertions
+
+        Response responseAfterUpdate = UserEndPoints.readUser(this.userPayload.getUsername());
+        responseAfterUpdate.then().log().body().statusCode(200);//rest Assured assertions
+    }
+
+    @Test(priority = 4)
+    public void testDeleteUserByName(){
+
+        Response response = UserEndPoints.deleteUser(this.userPayload.getUsername());
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
     }

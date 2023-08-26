@@ -1,5 +1,7 @@
 package api.endpoints;
 import static io.restassured.RestAssured.*;
+
+import api.payload.User;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 

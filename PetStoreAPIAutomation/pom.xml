@@ -58,7 +58,12 @@
         <!-- POI OOxml Library for excel sheet data-->
         <dependency>
             <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml-full</artifactId>
+            <artifactId>poi</artifactId>
+            <version>5.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
             <version>5.2.2</version>
         </dependency>
         <!-- Scribe Java Library for OAuth1 and OAuth2 validation-->

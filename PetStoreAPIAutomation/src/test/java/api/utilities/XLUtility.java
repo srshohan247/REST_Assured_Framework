@@ -59,7 +59,6 @@ public class XLUtility {
         catch(Exception e){
             data = "";
         }
-        int cellcount = row.getLastCellNum();
         workbook.close();
         fi.close();
         return data;

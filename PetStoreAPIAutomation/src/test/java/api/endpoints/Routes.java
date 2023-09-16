@@ -7,5 +7,6 @@ public class Routes {
     public static String get_url = base_url+"/user/{username}";
     public static String update_url = base_url+"user/{username}";
     public static String delete_url = base_url+"user/{username}";
+    public static String get_pet_url = base_url+"/pet/{petId}";
 
 }

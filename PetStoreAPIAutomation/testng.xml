@@ -6,8 +6,9 @@
     </listeners>
     <test verbose="2" preserve-order="true" name="C:/Users/User/Downloads/Programming/REST_Assured_Framework/PetStoreAPIAutomation/src/test/java/api/tests">
         <classes>
-            <class name="api.tests.DataDrivenTests"><methods><include name="testPostUser"/><include name="testGetUserByName"/><include name="testDeleteUserByName"/></methods></class>
+            <!--<class name="api.tests.DataDrivenTests"><methods><include name="testPostUser"/><include name="testGetUserByName"/><include name="testDeleteUserByName"/></methods></class> -->
             <!--<class name="api.tests.UserTests"><methods><include name="testPostUser"/><include name="testGetUserByName"/><include name="testUpdateUserByName"/><include name="testDeleteUserByName"/></methods></class> -->
+            <class name="api.tests.PetTest"><methods><include name="testHappyPath"/><include name="testResponseHeader"/><include name="testResponseParam"/><include name="testResponseTime"/></methods></class>
         </classes>
     </test>
 </suite>
